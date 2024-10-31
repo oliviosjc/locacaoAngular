@@ -1,0 +1,24 @@
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+  <div class="card" style="width: 400px;">
+    <div class="card-body">
+      <h5 class="card-title text-center">Locação Frontend</h5>
+      <form (ngSubmit)="onLogin()">
+        <div class="mb-3">
+          <label for="username" class="form-label">E-mail:</label>
+          <input type="email" id="username" class="form-control" [(ngModel)]="username" name="username" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password:</label>
+          <input type="password" id="password" class="form-control" [(ngModel)]="password" name="password" required>
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+          {{ errorMessage }}
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Acessar</button>
+      </form>
+      <div class="text-center mt-3">
+        <a routerLink="/forgot-password">Esqueceu a senha?</a>
+      </div>
+    </div>
+  </div>
+</div>
