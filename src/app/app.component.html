@@ -1,1 +1,8 @@
-<router-outlet />
+<div class="d-flex" [ngClass]="{'sidebar-visible': isAuthenticated}">
+  <app-sidebar *ngIf="isAuthenticated"></app-sidebar>
+  <div class="flex-fill">
+    <div class="container">
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -7,24 +7,23 @@ import { AuthService } from '../../core/services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent
-{
+export class LoginComponent {
   username = '';
   password = '';
   errorMessage: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) { }
 
-  onLogin()
-  {
-    if (this.authService.login(this.username, this.password))
-    {
-      this.errorMessage = '';
-      this.router.navigate(['/dashboard']);
-    }
-    else
-    {
-      this.errorMessage = 'E-mail ou senha incorretos.';
-    }
+  onLogin() {
+    this.authService.login(this.username, this.password);
+
+    this.authService.isLoggedIn().subscribe(isLoggedIn => {
+      if (isLoggedIn) {
+        this.errorMessage = '';
+        this.router.navigate(['/dashboard']);
+      } else {
+        this.errorMessage = 'E-mail ou senha incorretos.';
+      }
+    });
   }
 }

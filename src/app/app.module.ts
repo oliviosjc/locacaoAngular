@@ -8,6 +8,9 @@ import { AuthModule } from './auth/auth.module';
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { SharedModule } from './shared/shared.module';
+import { PagesModule } from './pages/pages.module';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -24,7 +27,9 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    AuthModule
+    AuthModule,
+    PagesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

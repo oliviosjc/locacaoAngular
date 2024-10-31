@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
+import { AuthService } from './core/services/auth.service';
 
-@Component
-({
+@Component({
   selector: 'app-root',
-  standalone: false,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
+export class AppComponent {
+  isAuthenticated: boolean = false;
 
-export class AppComponent
-{
-  title = 'locacao-frontend';
+  constructor(private authService: AuthService) {}
+
+  ngOnInit()
+  {
+    this.authService.isLoggedIn().subscribe(isLoggedIn => {
+      this.isAuthenticated = isLoggedIn;
+    });
+  }
 }

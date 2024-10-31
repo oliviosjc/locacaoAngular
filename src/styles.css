@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+app-sidebar {
+  position: fixed; /* Fixa a sidebar na tela */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 280px; /* Largura da sidebar */
+  overflow-y: auto; /* Permite rolagem vertical na sidebar, se necessário */
+}
+
+.flex-fill {
+  overflow-y: auto; /* Permite rolagem vertical no conteúdo */
+  height: 100vh; /* Altura total da tela */
+}
+
+/* Aplica margens quando a sidebar está visível */
+.sidebar-visible .flex-fill {
+  margin-left: 280px; /* Espaço à esquerda igual à largura da sidebar */
+}
