@@ -1,7 +1,15 @@
 .card {
-  transition: transform 0.2s ease; /* Transição suave para a transformação */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Adiciona um cursor pointer para indicar que o card é interativo */
 }
 
 .card:hover {
-  transform: scale(1.07); /* Aumenta o tamanho do card em 5% ao passar o mouse */
+  transform: scale(1.05); /* Aumenta a escala do card */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao passar o mouse */
+}
+
+/* Caso você queira adicionar um efeito de foco */
+.card:focus {
+  outline: none; /* Remove o contorno padrão */
+  transform: scale(1.05); /* Mantém o aumento de escala quando o card está em foco */
 }
