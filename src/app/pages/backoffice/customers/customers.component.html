@@ -1,19 +1,21 @@
 <br>
-<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="d-flex justify-content-between align-items-center">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+  class="d-flex justify-content-between align-items-center">
   <ol class="breadcrumb mb-0">
-    <li class="breadcrumb-item text-secundary fw-lighter cursor-pointer" (click)="navigateTo('backoffice')">Módulos</li>
+    <li class="breadcrumb-item text-secondary fw-lighter cursor-pointer" (click)="navigateTo('backoffice')">Módulos</li>
     <li class="breadcrumb-item active text-light fw-bold" aria-current="page">Gestão de clientes</li>
   </ol>
   <div>
-    <button type="button" class="btn btn-light border border-dark me-2">Documentos <i class="bi bi-file-earmark-person"></i></button>
-    <button type="button" class="btn btn-dark border border-light">Cadastrar <i class="bi bi-file-plus"></i></button>
+    <button type="button" class="btn btn-light border border-dark me-2" data-bs-toggle="modal" data-bs-target="#documentModal">Documentos <i class="bi bi-gear"></i></button>
+    <button type="button" class="btn btn-dark border border-light" data-bs-toggle="modal" data-bs-target="#registerModal">Cadastrar <i class="bi bi-plus"></i></button>
   </div>
 </nav>
 <br>
 <div class="row align-items-sm-stretch">
   <div class="alert alert-dark fw-lighter" role="alert">
     <div class="input-group input-group-lg">
-      <input type="text" id="clientSearch" placeholder="" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <input type="text" id="clientSearch" placeholder="Pesquisar cliente" class="form-control"
+        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
     </div>
   </div>
@@ -38,5 +40,268 @@
         <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
       </td>
     </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>MARIA JOÃO DA SILVA</td>
+      <td>123.456.789-10</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>CARLOS EDUARDO PEREIRA</td>
+      <td>987.654.321-00</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>ANA LÚCIA MARTINS</td>
+      <td>321.654.987-11</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>FELIPE ALVES DE SOUZA</td>
+      <td>456.789.123-45</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>GABRIELA DOS SANTOS</td>
+      <td>654.321.987-22</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>VITOR HUGO LIMA</td>
+      <td>789.123.456-33</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
   </tbody>
 </table>
+
+<div class="d-flex justify-content-between align-items-center">
+  <div>
+    <span class="text-light">Mostrando 1-7 de 50 resultados</span>
+  </div>
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link text-muted">Anterior</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-muted">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-white"><strong>2</strong></a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-muted">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-muted">Próximo</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="documentModal" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title" id="documentModalLabel">Configuração de Documentos</h5>
+          <p class="text-muted mb-0 text-sm">Aqui você pode definir quais documentos são necessários para cadastrar novos clientes</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nome do Documento</th>
+              <th scope="col">Ordem</th>
+              <th scope="col">Obrigatório</th>
+              <th scope="col" class="text-center">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RG</td>
+              <td>1</td>
+              <td><input type="checkbox" checked></td>
+              <td class="text-center">
+                <button type="button" class="btn btn-secondary me-1" title="Mover para cima" disabled><i class="bi bi-arrow-up"></i></button>
+                <button type="button" class="btn btn-secondary me-1" title="Mover para baixo"><i class="bi bi-arrow-down"></i></button>
+                <button type="button" class="btn btn-danger" title="Deletar"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td>2</td>
+              <td><input type="checkbox" checked></td>
+              <td class="text-center">
+                <button type="button" class="btn btn-secondary me-1" title="Mover para cima"><i class="bi bi-arrow-up"></i></button>
+                <button type="button" class="btn btn-secondary me-1" title="Mover para baixo"><i class="bi bi-arrow-down"></i></button>
+                <button type="button" class="btn btn-danger" title="Deletar"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>Comprovante de Residência</td>
+              <td>3</td>
+              <td><input type="checkbox"></td>
+              <td class="text-center">
+                <button type="button" class="btn btn-secondary me-1" title="Mover para cima"><i class="bi bi-arrow-up"></i></button>
+                <button type="button" class="btn btn-secondary me-1" title="Mover para baixo" disabled><i class="bi bi-arrow-down"></i></button>
+                <button type="button" class="btn btn-danger" title="Deletar"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Fechar</button>
+          <button type="button" class="btn btn-light text-dark">Adicionar Novo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Cadastrar -->
+<div class="modal fade bd-example-modal-xl" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title" id="documentModalLabel">Cadastrar novo Cliente</h5>
+          <p class="text-muted mb-0 text-sm">Aqui voce pode cadastrar novos clientes com seus respectivos contatos e endereços</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="clientName" class="form-label text-center">Nome</label>
+              <input type="text" class="form-control" id="clientName" required>
+            </div>
+            <div class="col-md-6">
+              <label for="clientDoc" class="form-label text-center">RG ou CPF ou CNPJ</label>
+              <input type="text" class="form-control" id="clientDoc" required>
+            </div>
+          </div>
+
+          <br>
+
+          <h6>Contatos</h6>
+          <div id="contactList">
+            <div class="row mb-3 contact-item">
+              <div class="col">
+                <label class="form-label">Nome do contato</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col">
+                <label class="form-label">Posição</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col">
+                <label class="form-label">WhatsApp</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="col">
+                <label class="form-label">Receber Notificações</label>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="notifications" style="height: 2rem; width: 2rem;">
+                </div>
+              </div>
+              <div class="col-auto d-flex flex-column align-items-start">
+                <label class="form-label">&nbsp;</label>
+                <button type="button" class="btn btn-danger remove-contact">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary mb-3" id="addContact">Adicionar Contato</button>
+
+          <hr> <!-- Separador entre Contatos e Endereços -->
+
+          <h6>Endereços</h6>
+          <div id="addressList">
+            <div class="row mb-3 address-item">
+              <div class="col-1-5">
+                <label class="form-label">CEP</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label class="form-label">Endereço</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label class="form-label">Cidade</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-1-5">
+                <label class="form-label">Estado</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label class="form-label">Bairro</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-1 mb-1">
+                <label class="form-label">Número</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label class="form-label">Complemento</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-8 mb-8">
+                <label class="form-label">Referência</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-auto d-flex flex-column align-items-start">
+                <label class="form-label">&nbsp;</label>
+                <button type="button" class="btn btn-danger remove-contact">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary mb-3" id="addAddress">Adicionar Endereço</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Fechar</button>
+          <button type="button" class="btn btn-light text-dark">Adicionar Novo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

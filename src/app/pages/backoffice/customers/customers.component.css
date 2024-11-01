@@ -1,3 +1,7 @@
 .cursor-pointer {
   cursor: pointer;
 }
+.col-1-5 {
+  flex: 0 0 12.5%; /* 1.5 colunas de um total de 12 */
+  max-width: 12.5%;
+}

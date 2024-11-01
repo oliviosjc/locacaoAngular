@@ -31,12 +31,21 @@
             </a>
           </li>
           <li>
+            <a routerLink="/rental"
+               class="nav-link text-secondary"
+               routerLinkActive="text-white"
+               [routerLinkActiveOptions]="{ exact: true }">
+              <i class="bi-file-earmark-plus  d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
+              Alocar
+            </a>
+          </li>
+          <li>
             <a routerLink="/backoffice"
                class="nav-link text-secondary"
                routerLinkActive="text-white"
                [routerLinkActiveOptions]="{ exact: true }">
               <i class="bi bi-folder d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
-              Módulos
+              Backoffice
             </a>
           </li>
           <li>
