@@ -1,4 +1,58 @@
 <header>
-  <h1>Gestão de Equipamentos</h1>
-  <button (click)="logout()">Logout</button>
+  <div class="px-3 py-2 text-bg-dark border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"/>
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a routerLink="/home"
+               class="nav-link text-secondary"
+               routerLinkActive="text-white"
+               [routerLinkActiveOptions]="{ exact: true }">
+              <i class="bi bi-house d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
+              Página Inicial
+            </a>
+          </li>
+          <li>
+            <a routerLink="/dashboard"
+               class="nav-link text-secondary"
+               routerLinkActive="text-white"
+               [routerLinkActiveOptions]="{ exact: true }">
+              <i class="bi bi-speedometer2 d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a routerLink="/backoffice"
+               class="nav-link text-secondary"
+               routerLinkActive="text-white"
+               [routerLinkActiveOptions]="{ exact: true }">
+              <i class="bi bi-folder d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
+              Módulos
+            </a>
+          </li>
+          <li>
+            <a routerLink="/my-account"
+               class="nav-link text-secondary"
+               routerLinkActive="text-white"
+               [routerLinkActiveOptions]="{ exact: true }">
+              <i class="bi bi-gear-fill d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
+              Minha Conta
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-secondary">
+              <i class="bi bi-box-arrow-right d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
+              Sair
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </header>

@@ -1,27 +1,47 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { LoadingService } from './loading.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  private loggedIn = new BehaviorSubject<boolean>(false);
+export class AuthService
+{
+  private loggedIn = new BehaviorSubject<boolean>(true);
+  constructor(private loadingService: LoadingService)
+  {}
 
-  // Simulação de login
-  login(username: string, password: string): void
+
+  login(username: string, password: string): Observable<boolean>
   {
-    if (username === 'admin' && password === 'admin')
+    this.loadingService.show();
+    return new Observable<boolean>(observer =>
     {
-      this.loggedIn.next(true);
-    }
+      setTimeout(() =>
+      {
+        if (username === 'admin' && password === 'admin')
+        {
+          this.loadingService.hide();
+          this.loggedIn.next(true);
+          observer.next(true);
+        }
+        else
+        {
+          this.loadingService.hide();
+          observer.next(false);
+        }
+        observer.complete();
+      }, 2500);
+    });
   }
 
-  // Verifica se o usuário está logado
-  isLoggedIn(): Observable<boolean> {
+  isLoggedIn(): Observable<boolean>
+  {
     return this.loggedIn.asObservable();
   }
 
-  logout(): void {
+  logout(): void
+  {
     this.loggedIn.next(false);
   }
 }

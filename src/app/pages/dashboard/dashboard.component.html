@@ -1,2 +1,139 @@
+<br>
+<div class="row g-6 mb-6">
+  <div class="col-xl-3 col-sm-6 col-12">
+    <div class="card shadow border-1">
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <span class="h6 font-semibold text-muted text-sm d-block mb-2">Equipamentos em uso</span>
+                    <span class="h1 font-bold mb-0">37</span>
+                </div>
+                <div class="col-auto">
+                    <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                      <i class="bi bi-arrow-up-right-square-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xl-3 col-sm-6 col-12">
+  <div class="card shadow border-1">
+      <div class="card-body bg-body-tertiary">
+          <div class="row">
+              <div class="col">
+                  <span class="h6 font-semibold text-muted text-sm d-block mb-2">Disponíveis para locação</span>
+                  <span class="h1 font-bold mb-0">12</span>
+              </div>
+              <div class="col-auto">
+                  <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                      <i class="bi bi-check-all"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-xl-3 col-sm-6 col-12">
+  <div class="card shadow border-1">
+      <div class="card-body">
+          <div class="row">
+              <div class="col">
+                  <span class="h6 font-semibold text-muted text-sm d-block mb-2">Em Manutenção</span>
+                  <span class="h1 font-bold mb-0">4</span>
+              </div>
+              <div class="col-auto">
+                  <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                      <i class="bi bi-cone-striped"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-xl-3 col-sm-6 col-12">
+  <div class="card shadow border-1">
+      <div class="card-body bg-body-tertiary">
+          <div class="row">
+              <div class="col">
+                  <span class="h6 font-semibold text-muted text-sm d-block mb-2">Reservados</span>
+                  <span class="h1 font-bold mb-0">2</span>
+              </div>
+              <div class="col-auto">
+                  <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                      <i class="bi bi-calendar-week"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+<br>
+<div class="row g-6 mb-6 d-flex align-items-stretch">
+  <div class="col-xl-6 col-sm-6 col-12">
+    <div class="card shadow border-1 position-relative h-100"> <!-- Adicionado h-100 -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <span class="h6 font-semibold text-muted text-sm d-block mb-4">Faturamento nos últimos 7 dias</span>
+            <canvas #lineChart></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-3 col-sm-3 col-12">
+    <div class="card shadow border-1 position-relative h-100"> <!-- Adicionado h-100 -->
+      <div class="card-body">
+        <span class="h6 font-semibold text-muted text-sm d-block mb-1">Modelos em Alta</span>
+        <p class="text-secondary mb-4" style="font-size: 0.85rem;">Modelos mais alocados nos últimos 7 dias</p>
+        <ol class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Betoneira
+            <span class="badge bg-light rounded-pill text-black">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Compactadora de Solo
+            <span class="badge bg-light rounded-pill text-black">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Andaime
+            <span class="badge bg-light rounded-pill text-black">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Martelo
+            <span class="badge bg-light rounded-pill text-black">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Parafusadeira
+            <span class="badge bg-light rounded-pill text-black">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Chave de fenda
+            <span class="badge bg-light rounded-pill text-black">1</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-3 col-sm-3 col-12">
+    <div class="card shadow border-1 position-relative h-100"> <!-- Adicionado h-100 -->
+      <div class="card-body">
+        <span class="h6 font-semibold text-muted text-sm d-block mb-1">Clientes em Destaque</span>
+        <p class="text-secondary mb-4" style="font-size: 0.85rem;">Clientes mais faturados nos últimos 7 dias</p>
+        <div class="row">
+          <div class="col">
+            <canvas #lineChart></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 

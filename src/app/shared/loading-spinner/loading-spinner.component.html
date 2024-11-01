@@ -1,1 +1,5 @@
-<p>loading-spinner works!</p>
+<div *ngIf="loadingService.loading$ | async" class="loading-overlay">
+  <div class="spinner-border text-light" role="status" style="width: 4rem; height: 4rem;">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
