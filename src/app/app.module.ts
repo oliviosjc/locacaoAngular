@@ -20,6 +20,10 @@ import { MyAccountComponent } from './pages/my-account/my-account.component';
 import { CustomersComponent } from './pages/backoffice/customers/customers.component';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { RentalComponent } from './pages/rental/rental.component';
+import { BrandsComponent } from './pages/backoffice/brands/brands.component';
+import { CategoriesComponent } from './pages/backoffice/categories/categories.component';
+import { ModelsComponent } from './pages/backoffice/models/models.component';
+import { MaintenancesComponent } from './pages/backoffice/maintenances/maintenances.component';
 
 
 const routes: Routes = [
@@ -30,6 +34,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'backoffice', component: BackofficeComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/customers', component: CustomersComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/brands', component: BrandsComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/categories', component: CategoriesComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/models', component: ModelsComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/maintenances', component: MaintenancesComponent, canActivate: [AuthGuard] },
   { path: 'my-account', component: MyAccountComponent, canActivate: [AuthGuard] },
   { path: 'rental', component: RentalComponent, canActivate: [AuthGuard] }
 ];

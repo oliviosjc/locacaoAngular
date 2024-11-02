@@ -6,8 +6,6 @@
       <div class="card position-relative" style="height: 100%;">
         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
           <img src="../../../assets/user.jpg" class="rounded-3" style="width: 67%;" alt="Avatar" />
-
-          <!-- Ícone de câmera -->
           <span class="camera-icon position-absolute top-0 end-0 m-2 p-1 bg-dark text-white rounded-circle" style="cursor: pointer;">
             <i class="bi bi-camera" style="font-size: 1.2rem;"></i>
           </span>
@@ -29,6 +27,10 @@
 
             <li class="nav-item">
               <button class="nav-link text-white text-decoration-none" data-bs-toggle="tab" data-bs-target="#profile-change-password">Alterar Senha</button>
+            </li>
+
+            <li class="nav-item">
+              <button class="nav-link text-white text-decoration-none" data-bs-toggle="tab" data-bs-target="#profile-comunications">Comunicações</button>
             </li>
 
           </ul>
@@ -72,13 +74,6 @@
                 </div>
 
                 <div class="row mb-3">
-                  <label for="company" class="col-md-4 col-lg-3 col-form-label">Período</label>
-                  <div class="col-md-8 col-lg-9">
-                    <input name="company" type="text" class="form-control" id="company" value="ANUAL" disabled>
-                  </div>
-                </div>
-
-                <div class="row mb-3">
                   <label for="Job" class="col-md-4 col-lg-3 col-form-label">Plano</label>
                   <div class="col-md-8 col-lg-9">
                     <input name="job" type="text" class="form-control" id="Job" value="Diamante" disabled>
@@ -93,7 +88,8 @@
                 </div>
 
                 <div class="text-end">
-                  <button type="submit" class="btn btn-dark" disabled>Preferências de Pagamento</button>
+                  <button type="submit" class="btn btn-danger m-1" disabled>Cancelar Assinatura</button>
+                  <button type="submit" class="btn btn-light" disabled>Preferências de Pagamento</button>
                 </div>
               </form>
 
@@ -131,6 +127,36 @@
 
             </div>
 
+            <div class="tab-pane fade pt-3" id="profile-comunications">
+              <form>
+
+                <div class="row mb-3">
+                  <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label"></label>
+                  <div class="col-md-8 col-lg-9">
+                    <input name="password" type="password" class="form-control" id="currentPassword">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Nova Senha</label>
+                  <div class="col-md-8 col-lg-9">
+                    <input name="newpassword" type="password" class="form-control" id="newPassword">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Confirme a nova senha</label>
+                  <div class="col-md-8 col-lg-9">
+                    <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                  </div>
+                </div>
+
+                <div class="text-end">
+                  <button type="submit" class="btn btn-light">Alterar Senha</button>
+                </div>
+              </form><!-- End Change Password Form -->
+
+            </div>
           </div><!-- End Bordered Tabs -->
 
         </div>

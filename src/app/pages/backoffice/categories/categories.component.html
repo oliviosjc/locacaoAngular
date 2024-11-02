@@ -1,0 +1,226 @@
+<br>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+  class="d-flex justify-content-between align-items-center">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item text-secondary fw-lighter cursor-pointer" (click)="navigateTo('backoffice')">Módulos</li>
+    <li class="breadcrumb-item active text-light fw-bold" aria-current="page">Gestão de categorias</li>
+  </ol>
+  <div>
+    <button type="button" class="btn btn-light border border-dark me-2" data-bs-toggle="modal" data-bs-target="#documentModal">Informações Técnicas <i class="bi bi-gear"></i></button>
+    <button type="button" class="btn btn-dark border border-light" data-bs-toggle="modal" data-bs-target="#registerModal">Cadastrar <i class="bi bi-plus"></i></button>
+  </div>
+</nav>
+<br>
+<div class="row align-items-sm-stretch">
+  <div class="alert alert-dark fw-lighter" role="alert">
+    <div class="input-group input-group-lg">
+      <input type="text" id="clientSearch" placeholder="Pesquisar categoria" class="form-control"
+        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+    </div>
+  </div>
+</div>
+
+<table class="table table-responsive table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">QTD. Modelos</th>
+      <th scope="col" class="text-center">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="align-middle">
+      <th scope="row">1</th>
+      <td>Máquinas de Terraplanagem</td>
+      <td><span class="badge text-bg-dark fs-6 text-muted">12</span></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr class="align-middle">
+      <th scope="row">2</th>
+      <td>Equipamentos de Elevação</td>
+      <td><span class="badge text-bg-dark fs-6 text-muted">12</span></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr class="align-middle">
+      <th scope="row">3</th>
+      <td>Equipamentos de Compactação</td>
+      <td><span class="badge text-bg-dark fs-6 text-muted">12</span></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr class="align-middle">
+      <th scope="row">4</th>
+      <td>Máquinas de Asfalto</td>
+      <td><span class="badge text-bg-dark fs-6 text-muted">12</span></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr class="align-middle">
+      <th scope="row">5</th>
+      <td>Equipamentos de Corte</td>
+      <td><span class="badge text-bg-dark fs-6 text-muted">12</span></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr class="align-middle">
+      <th scope="row">6</th>
+      <td>Plataformas Aéreas</td>
+      <td><span class="badge text-bg-dark fs-6 text-muted">12</span></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    <tr class="align-middle">
+      <th scope="row">7</th>
+      <td>Geradores</td>
+      <td><span class="badge text-bg-dark fs-6 text-muted">12</span></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-dark me-2"><i class="bi bi-pencil"></i></button>
+        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+  </tbody>
+
+
+</table>
+
+<div class="d-flex justify-content-between align-items-center">
+  <div>
+    <span class="text-light">Mostrando 1-7 de 50 resultados</span>
+  </div>
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link text-muted">Anterior</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-muted">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-white"><strong>2</strong></a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-muted">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-muted">Próximo</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="modal fade bd-example-modal-lg" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title" id="documentModalLabel">Cadastrar nova Categoria</h5>
+          <p class="text-muted mb-0 text-sm">Aqui você pode cadastrar novas categorias. As categorias são usadas para categorizar seus modelos de equipamento</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="clientName" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="clientName" required>
+            </div>
+            <div class="col-md-8">
+              <label for="clientDoc" class="form-label">Descrição</label>
+              <input type="text" class="form-control" id="clientDoc" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-light text-dark">Adicionar Marca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="documentModal" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title" id="documentModalLabel">Configuração das Informações Técnicas</h5>
+          <p class="text-muted mb-0 text-sm">Aqui você pode definir quais informações técnicas são necessárias para cadastrar novos modelos de equipamentos</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nome do Campo</th>
+              <th scope="col">Tipo do Campo</th>
+              <th scope="col">Ordem</th>
+              <th scope="col">Obrigatório</th>
+              <th scope="col" class="text-center">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Comprimento</td>
+              <td><span class="badge text-bg-dark fs-6 text-muted">NUMÉRICO</span></td>
+              <td>1</td>
+              <td><input type="checkbox" checked></td>
+              <td class="text-center">
+                <button type="button" class="btn btn-secondary me-1" title="Mover para cima" disabled><i class="bi bi-arrow-up"></i></button>
+                <button type="button" class="btn btn-secondary me-1" title="Mover para baixo"><i class="bi bi-arrow-down"></i></button>
+                <button type="button" class="btn btn-danger" title="Deletar"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>Largura</td>
+              <td><span class="badge text-bg-dark fs-6 text-muted">NUMÉRICO</span></td>
+              <td>2</td>
+              <td><input type="checkbox" checked></td>
+              <td class="text-center">
+                <button type="button" class="btn btn-secondary me-1" title="Mover para cima" disabled><i class="bi bi-arrow-up"></i></button>
+                <button type="button" class="btn btn-secondary me-1" title="Mover para baixo"><i class="bi bi-arrow-down"></i></button>
+                <button type="button" class="btn btn-danger" title="Deletar"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>Profundidade</td>
+              <td><span class="badge text-bg-dark fs-6 text-muted">NUMÉRICO</span></td>
+              <td>3</td>
+              <td><input type="checkbox" checked></td>
+              <td class="text-center">
+                <button type="button" class="btn btn-secondary me-1" title="Mover para cima" disabled><i class="bi bi-arrow-up"></i></button>
+                <button type="button" class="btn btn-secondary me-1" title="Mover para baixo"><i class="bi bi-arrow-down"></i></button>
+                <button type="button" class="btn btn-danger" title="Deletar"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Fechar</button>
+          <button type="button" class="btn btn-light text-dark">Adicionar Informação Técnica</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
