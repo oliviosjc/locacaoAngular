@@ -2,57 +2,53 @@
   <div class="px-0 py-2 text-bg-dark border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-between">
-        <div class="p-0" style="flex: 0 0 25%;">
-          <select class="form-select" aria-label="Selecione a companhia">
+        <!-- Bloco do Select e do Botão Gerenciar Companhias -->
+        <div class="d-flex align-items-center flex-nowrap">
+          <select class="form-select me-2" style="min-width: 200px;" aria-label="Selecione a companhia">
             <option selected>Todas as companhias</option>
             <option value="1">Companhia A</option>
             <option value="2">Companhia B</option>
             <option value="3">Companhia C</option>
           </select>
+          <button class="btn btn-secondary text-nowrap px-3" type="button" data-bs-toggle="tooltip"
+            data-bs-placement="top" title="Gerenciar Companhias">
+            <i class="bi bi-gear"></i>
+          </button>
         </div>
 
+        <!-- Navegação -->
         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
           <li>
-            <a routerLink="/home"
-               class="nav-link text-secondary"
-               routerLinkActive="text-white"
-               [routerLinkActiveOptions]="{ exact: true }">
+            <a routerLink="/home" class="nav-link text-secondary" routerLinkActive="text-white"
+              [routerLinkActiveOptions]="{ exact: true }">
               <i class="bi bi-house d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
               Página Inicial
             </a>
           </li>
           <li>
-            <a routerLink="/dashboard"
-               class="nav-link text-secondary"
-               routerLinkActive="text-white"
-               [routerLinkActiveOptions]="{ exact: true }">
+            <a routerLink="/dashboard" class="nav-link text-secondary" routerLinkActive="text-white"
+              [routerLinkActiveOptions]="{ exact: true }">
               <i class="bi bi-speedometer2 d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
               Dashboard
             </a>
           </li>
           <li>
-            <a routerLink="/rental"
-               class="nav-link text-secondary"
-               routerLinkActive="text-white"
-               [routerLinkActiveOptions]="{ exact: true }">
-              <i class="bi-file-earmark-plus  d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
+            <a routerLink="/rental" class="nav-link text-secondary" routerLinkActive="text-white"
+              [routerLinkActiveOptions]="{ exact: true }">
+              <i class="bi-file-earmark-plus d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
               Alocar
             </a>
           </li>
           <li>
-            <a routerLink="/backoffice"
-               class="nav-link text-secondary"
-               routerLinkActive="text-white"
-               [routerLinkActiveOptions]="{ exact: true }">
+            <a routerLink="/backoffice" class="nav-link text-secondary" routerLinkActive="text-white"
+              [routerLinkActiveOptions]="{ exact: true }">
               <i class="bi bi-folder d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
               Backoffice
             </a>
           </li>
           <li>
-            <a routerLink="/my-account"
-               class="nav-link text-secondary"
-               routerLinkActive="text-white"
-               [routerLinkActiveOptions]="{ exact: true }">
+            <a routerLink="/my-account" class="nav-link text-secondary" routerLinkActive="text-white"
+              [routerLinkActiveOptions]="{ exact: true }">
               <i class="bi bi-gear-fill d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
               Minha Conta
             </a>

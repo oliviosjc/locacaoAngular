@@ -24,6 +24,8 @@ import { BrandsComponent } from './pages/backoffice/brands/brands.component';
 import { CategoriesComponent } from './pages/backoffice/categories/categories.component';
 import { ModelsComponent } from './pages/backoffice/models/models.component';
 import { MaintenancesComponent } from './pages/backoffice/maintenances/maintenances.component';
+import { UsersComponent } from './pages/backoffice/users/users.component';
+import { TransportComponent } from './pages/backoffice/transport/transport.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,8 @@ const routes: Routes = [
   { path: 'backoffice/categories', component: CategoriesComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/models', component: ModelsComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/maintenances', component: MaintenancesComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/users', component: UsersComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/transport', component: TransportComponent, canActivate: [AuthGuard] },
   { path: 'my-account', component: MyAccountComponent, canActivate: [AuthGuard] },
   { path: 'rental', component: RentalComponent, canActivate: [AuthGuard] }
 ];

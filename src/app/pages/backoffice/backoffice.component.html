@@ -23,7 +23,7 @@
 </div>
 <br>
 <div class="row align-items-sm-stretch">
-  <div class="col-md-4">
+  <div class="col-md-4"  (click)="navigateTo('backoffice/users')">
     <div class="h-100 p-5 bg-body-tertiary border rounded-3 position-relative card">
       <h4>Usuários e Permissões</h4>
       <i class="fas fa-key fa-3x position-absolute bottom-0 end-0 m-3"></i>
@@ -35,10 +35,10 @@
       <i class="fas fa-shapes fa-3x position-absolute bottom-0 end-0 m-3"></i>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4"  (click)="navigateTo('backoffice/transport')">
     <div class="h-100 p-5 bg-body-tertiary border rounded-3 position-relative card">
-      <h4>Minha Frota</h4>
-      <i class="fas fa-car fa-3x position-absolute bottom-0 end-0 m-3"></i>
+      <h4>Veículos e Motoristas</h4>
+      <i class="fas fa-truck fa-3x position-absolute bottom-0 end-0 m-3"></i>
     </div>
   </div>
 </div>

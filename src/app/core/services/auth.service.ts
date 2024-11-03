@@ -7,7 +7,7 @@ import { LoadingService } from './loading.service';
 })
 export class AuthService
 {
-  private loggedIn = new BehaviorSubject<boolean>(false);
+  private loggedIn = new BehaviorSubject<boolean>(true);
   constructor(private loadingService: LoadingService)
   {}
 
