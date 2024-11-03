@@ -2,7 +2,6 @@
   <div class="px-0 py-2 text-bg-dark border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-between">
-        <!-- Bloco do Select e do Botão Gerenciar Companhias -->
         <div class="d-flex align-items-center flex-nowrap">
           <select class="form-select me-2" style="min-width: 200px;" aria-label="Selecione a companhia">
             <option selected>Todas as companhias</option>
@@ -15,8 +14,6 @@
             <i class="bi bi-gear"></i>
           </button>
         </div>
-
-        <!-- Navegação -->
         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
           <li>
             <a routerLink="/home" class="nav-link text-secondary" routerLinkActive="text-white"
@@ -41,7 +38,7 @@
           </li>
           <li>
             <a routerLink="/backoffice" class="nav-link text-secondary" routerLinkActive="text-white"
-              [routerLinkActiveOptions]="{ exact: true }">
+              [routerLinkActiveOptions]="{ exact: false }">
               <i class="bi bi-folder d-block mx-auto mb-1" style="width: 24px; height: 24px;"></i>
               Backoffice
             </a>

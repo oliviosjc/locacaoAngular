@@ -26,6 +26,7 @@ import { ModelsComponent } from './pages/backoffice/models/models.component';
 import { MaintenancesComponent } from './pages/backoffice/maintenances/maintenances.component';
 import { UsersComponent } from './pages/backoffice/users/users.component';
 import { TransportComponent } from './pages/backoffice/transport/transport.component';
+import { CommunicationsComponent } from './pages/backoffice/communications/communications.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'backoffice/maintenances', component: MaintenancesComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/users', component: UsersComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/transport', component: TransportComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/communications', component: CommunicationsComponent, canActivate: [AuthGuard] },
   { path: 'my-account', component: MyAccountComponent, canActivate: [AuthGuard] },
   { path: 'rental', component: RentalComponent, canActivate: [AuthGuard] }
 ];
