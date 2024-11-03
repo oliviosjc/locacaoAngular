@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './user-management.component.html',
   styleUrl: './user-management.component.css'
 })
-export class UserManagementComponent {
+export class UserManagementComponent
+{
 
 }
