@@ -10,7 +10,6 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
-import { HomeComponent } from './pages/home/home.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
@@ -28,6 +27,9 @@ import { UsersComponent } from './pages/backoffice/users/users.component';
 import { TransportComponent } from './pages/backoffice/transport/transport.component';
 import { CommunicationsComponent } from './pages/backoffice/communications/communications.component';
 import { ReturnsComponent } from './pages/backoffice/returns/returns.component';
+import { FinancialComponent } from './pages/backoffice/financial/financial.component';
+import { IaComponent } from './pages/ia/ia.component';
+import { CrmComponent } from './pages/crm/crm.component';
 
 
 const routes: Routes = [
@@ -35,7 +37,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'backoffice', component: BackofficeComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/customers', component: CustomersComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/brands', component: BrandsComponent, canActivate: [AuthGuard] },
@@ -46,7 +47,10 @@ const routes: Routes = [
   { path: 'backoffice/transport', component: TransportComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/communications', component: CommunicationsComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/returns', component: ReturnsComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/financial', component: FinancialComponent, canActivate: [AuthGuard] },
   { path: 'my-account', component: MyAccountComponent, canActivate: [AuthGuard] },
+  { path: 'ia', component: IaComponent, canActivate: [AuthGuard] },
+  { path: 'crm', component: CrmComponent, canActivate: [AuthGuard] },
   { path: 'rental', component: RentalComponent, canActivate: [AuthGuard] }
 ];
 

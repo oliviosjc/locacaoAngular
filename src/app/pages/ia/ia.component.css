@@ -1,0 +1,9 @@
+.fixed-center-text {
+  position: fixed; /* Fixa o texto na tela */
+  top: 50%; /* Posiciona verticalmente no meio */
+  left: 50%; /* Posiciona horizontalmente no meio */
+  transform: translate(-50%, -50%); /* Centraliza o texto */
+  color: white; /* Cor do texto, ajuste conforme necessário */
+  text-align: center; /* Centraliza o texto dentro do elemento */
+  z-index: 1000; /* Garante que o texto fique acima de outros elementos */
+}
