@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.css'
 })
+
 export class CustomersComponent
 {
   constructor(private readonly router: Router){}

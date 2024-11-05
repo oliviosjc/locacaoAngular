@@ -202,107 +202,27 @@
         <form>
           <div class="row mb-3">
             <div class="col-md-6">
+              <label for="clientDoc" class="form-label text-center">RG, CPF ou CNPJ</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="clientDoc" placeholder="Digite o documento" required>
+                <span class="input-group-text">
+                  <i class="bi bi-search"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-6">
               <label for="clientName" class="form-label text-center">Nome</label>
               <input type="text" class="form-control" id="clientName" required>
             </div>
-            <div class="col-md-6">
-              <label for="clientDoc" class="form-label text-center">RG ou CPF ou CNPJ</label>
-              <input type="text" class="form-control" id="clientDoc" required>
-            </div>
           </div>
-
-          <br>
-
-          <h6>Contatos</h6>
-          <div id="contactList">
-            <div class="row mb-3 contact-item">
-              <div class="col">
-                <label class="form-label">Nome do contato</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col">
-                <label class="form-label">Posição</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col">
-                <label class="form-label">WhatsApp</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" required>
-              </div>
-              <div class="col">
-                <label class="form-label">Receber Notificações</label>
-                <div>
-                  <input type="checkbox" class="form-check-input" id="notifications" style="height: 2rem; width: 2rem;">
-                </div>
-              </div>
-              <div class="col-auto d-flex flex-column align-items-start">
-                <label class="form-label">&nbsp;</label>
-                <button type="button" class="btn btn-danger remove-contact">
-                  <i class="bi bi-trash"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn btn-secondary mb-3" id="addContact">Adicionar Contato</button>
-
-          <hr> <!-- Separador entre Contatos e Endereços -->
-
-          <h6>Endereços</h6>
-          <div id="addressList">
-            <div class="row mb-3 address-item">
-              <div class="col-1-5">
-                <label class="form-label">CEP</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label class="form-label">Endereço</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label class="form-label">Cidade</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col-1-5">
-                <label class="form-label">Estado</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label class="form-label">Bairro</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col-md-1 mb-1">
-                <label class="form-label">Número</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="col-md-2 mb-2">
-                <label class="form-label">Complemento</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-md-8 mb-8">
-                <label class="form-label">Referência</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-auto d-flex flex-column align-items-start">
-                <label class="form-label">&nbsp;</label>
-                <button type="button" class="btn btn-danger remove-contact">
-                  <i class="bi bi-trash"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn btn-secondary mb-3" id="addAddress">Adicionar Endereço</button>
         </form>
       </div>
       <div class="modal-footer">
         <div class="text-end">
           <button type="button" class="btn btn-outline-light me-2">Fechar</button>
-          <button type="button" class="btn btn-light text-dark">Adicionar Cliente</button>
+          <button type="button" class="btn btn-light text-dark">Avançar ></button>
         </div>
       </div>
     </div>
   </div>
 </div>
-

@@ -30,6 +30,7 @@ import { ReturnsComponent } from './pages/backoffice/returns/returns.component';
 import { FinancialComponent } from './pages/backoffice/financial/financial.component';
 import { IaComponent } from './pages/ia/ia.component';
 import { CrmComponent } from './pages/crm/crm.component';
+import { EquipmentsComponent } from './pages/backoffice/equipments/equipments.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'backoffice/communications', component: CommunicationsComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/returns', component: ReturnsComponent, canActivate: [AuthGuard] },
   { path: 'backoffice/financial', component: FinancialComponent, canActivate: [AuthGuard] },
+  { path: 'backoffice/equipments', component: EquipmentsComponent, canActivate: [AuthGuard] },
   { path: 'my-account', component: MyAccountComponent, canActivate: [AuthGuard] },
   { path: 'ia', component: IaComponent, canActivate: [AuthGuard] },
   { path: 'crm', component: CrmComponent, canActivate: [AuthGuard] },
